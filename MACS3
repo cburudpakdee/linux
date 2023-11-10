@@ -1,0 +1,9 @@
+macs3 callpeak -t sort.index.exp.mel.myc.bam -c sort.index.inputCTRL.mel.myc.bam -g hs -n test -B -q 0.01
+
+-t = exp datafile
+-c = control datafile
+-f = format
+-g = mappable genome size 
+-n = prefix string for output files
+-B = store as bedgraph file ie .bdg
+-q = q-value (FDR) cutoff
