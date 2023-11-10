@@ -1,0 +1,1 @@
+pyega3 -cf CREDENTIALS_FILE.json datasets
