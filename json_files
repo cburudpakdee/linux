@@ -1,0 +1,3 @@
+touch CREDENTIALS_FILE.json
+#edit in NANO
+nano CREDENTIALS_FILE.json
