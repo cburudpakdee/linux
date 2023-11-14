@@ -22,4 +22,5 @@ export PATH=$PATH:/home/deviancedev/Desktop/drive_nov2023/STAR/STAR-2.7.11a/sour
 #-----Generate STAR alignment index
 STAR --runMode genomeGenerate --genomeDir /home/deviancedev/Desktop/drive_nov2023/Genome_indexes 
 --genomeFastaFiles /home/deviancedev/Desktop/drive_nov2023/Genome_indexes/Homo_sapiens.GRCh38.dna.primary_assembly.fa 
---sjdbGTFfile
+--sjdbGTFfile /home/deviancedev/Desktop/drive_nov2023/Genome_indexes/Homo_sapiens.GRCh38.110.chr.gtf 
+--sjdbOverhang 51
