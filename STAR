@@ -10,3 +10,5 @@ less output.fastq
 wget https://github.com/alexdobin/STAR/archive/2.7.11a.tar.gz
 tar -xzf 2.7.11a.tar.gz
 rm -r 2.7.11a.tar.gz
+cd STAR-2.7.11a
+cd source
