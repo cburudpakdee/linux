@@ -16,5 +16,5 @@ make STAR
 #-----STAR can only be run in source folder
 ./STAR --help
 #-----download indexes at https://hgdownload.soe.ucsc.edu/downloads.html
-
+wget --timestamping 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz' -o hg38.fa.gz
 
