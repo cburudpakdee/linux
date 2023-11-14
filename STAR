@@ -16,5 +16,5 @@ make STAR
 #-----STAR can only be run in source folder
 ./STAR --help
 #-----download indexes at https://hgdownload.soe.ucsc.edu/downloads.html
-
+gunzip hg38.fa.gz
 
