@@ -1,3 +1,6 @@
 #---if on new machine and install is required
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install g++
+sudo apt-get make
+#-----gunzip -c : This option is used to view the text within a compressed file without uncompressing it.
