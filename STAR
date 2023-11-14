@@ -13,3 +13,6 @@ rm -r 2.7.11a.tar.gz
 cd STAR-2.7.11a
 cd source
 make STAR
+#-----STAR can only be run in source folder
+./STAR --help
+
