@@ -16,4 +16,4 @@ make STAR
 #-----STAR can only be run in source folder
 ./STAR --help
 #-----download index and annotation file at https://useast.ensembl.org/Homo_sapiens/Info/Index
-
+#-----ie Homo_sapiens.GRCh38.dna_rm.primary_assembly.fa.gz and Homo_sapiens.GRCh38.96.chr.gtf.gz
