@@ -12,3 +12,4 @@ tar -xzf 2.7.11a.tar.gz
 rm -r 2.7.11a.tar.gz
 cd STAR-2.7.11a
 cd source
+make STAR
