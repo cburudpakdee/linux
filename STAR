@@ -15,6 +15,5 @@ cd source
 make STAR
 #-----STAR can only be run in source folder
 ./STAR --help
-#-----download indexes at https://hgdownload.soe.ucsc.edu/downloads.html
-gunzip hg38.fa.gz
+#-----download index and annotation file at https://useast.ensembl.org/Homo_sapiens/Info/Index
 
