@@ -7,3 +7,6 @@ sudo apt-get make
 #-----use -1000 to indicate number of reads to parse in separate output file ie. 1000 reads here
 gunzip -c <fast.q.gz file> | head -1000 > output.fastq
 less output.fastq
+wget https://github.com/alexdobin/STAR/archive/2.7.11a.tar.gz
+tar -xzf 2.7.11a.tar.gz
+rm -r 2.7.11a.tar.gz
