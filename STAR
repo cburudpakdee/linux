@@ -17,3 +17,4 @@ make STAR
 ./STAR --help
 #-----download indexes at https://hgdownload.soe.ucsc.edu/downloads.html
 
+
