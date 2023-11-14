@@ -20,4 +20,6 @@ export PATH=$PATH:/home/deviancedev/Desktop/drive_nov2023/STAR/STAR-2.7.11a/sour
 #-----download index and annotation file at https://useast.ensembl.org/Homo_sapiens/Info/Index
 #-----ie Homo_sapiens.GRCh38.dna_rm.primary_assembly.fa.gz and Homo_sapiens.GRCh38.96.chr.gtf.gz
 #-----Generate STAR alignment index
-STAR --runMode
+STAR --runMode genomeGenerate --genomeDir /home/deviancedev/Desktop/drive_nov2023/Genome_indexes 
+--genomeFastaFiles /home/deviancedev/Desktop/drive_nov2023/Genome_indexes/Homo_sapiens.GRCh38.dna.primary_assembly.fa 
+--sjdbGTFfile
