@@ -1,4 +1,1 @@
-pip install --user refgenie
-pip install --user --upgrade refgenie
-#----make executable in BASH
-PATH=$PATH:/home/deviancedev/.local/bin/:$PATH
+conda activate salmon
