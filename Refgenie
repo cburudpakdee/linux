@@ -1,1 +1,2 @@
-
+#---list available genomes
+refgenie listr -c /home/deviancedev/Desktop/genome_folder/genome_config.yaml
