@@ -1,1 +1,5 @@
 conda activate salmon
+salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_index/default 
+-l IU -1 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R1.fastq.gz 
+-2 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R2.fastq.gz 
+--validateMappings -o norm1_salmon
