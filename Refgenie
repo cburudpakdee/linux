@@ -1,2 +1,4 @@
+#----go to anaconda/bin
 #---list available genomes
-refgenie listr -c /home/deviancedev/Desktop/genome_folder/genome_config.yaml
+./refgenie listr -c /home/deviancedev/Desktop/genome_folder/genome_config.yaml
+./refgenie pull mm10_cdna/salmon_index -c /home/deviancedev/Desktop/genome_folder/genome_config.yaml
