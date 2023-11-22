@@ -1,1 +1,5 @@
+#------list datasets the account has access to
 pyega3 -cf CREDENTIALS_FILE.json datasets
+#------list individual files in datasets
+pyega3 -cf CREDENTIALS_FILE.json -d files <EGA---->
+#------extract files from datasets
