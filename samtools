@@ -22,5 +22,16 @@ samtools view pbmc_1k_v3_possorted_genome_bam_filterd.bam | cut -f 12- | tr "\t"
 # grep 'CB:Z:'                                                  Grep lines that start with CB:Z
 # uniq                                                          Omit repeated lines
 #-----------------------------------------------------------
+#----scan for features by single barcode
+samtools view pbmc_1k_v3_possorted_genome_bam_filterd.bam | cut -f 12- | grep "CB:Z:CGAGAAGTCAAGTTGC" | tr "\t" "\n" | grep "GX:Z" |awk '{count[$1]++} END {for(j in count) print count[j], j}' | sort -nr > feature_counts_extracted_bam.txt
+# samtools view pbmc_1k_v3_possorted_genome_bam.bam              # 
+# grep "xf:i:25"                                                 Print lines with xf:i:25
+# cut -f 12-                                                     Remove first 12 columns SAM file
+# grep "CB:Z:""                                                  Grep lines that start with CB:Z at the beginning of the line
+# tr "\t" "\n"                                                   Replace all tabs with a new line 
+# grep "GX:Z"                                                    Print lines with GX:Z at the beginning of the line
+# awk "{count[$1]++} END {for(j in count) print count[j], j}"    Count occurence of each barcode
+# sort -nr`                                                      Sort numerically and in reverse order
+#----------------------------------------------------
 
 
