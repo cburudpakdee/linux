@@ -3,3 +3,4 @@
 cd samtools-1.x
 ./configure
 make
+sudo make install
