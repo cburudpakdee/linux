@@ -1,0 +1,2 @@
+#---go into subset-bam-1,0-x86_64-linux folder
+./subset-bam -h
