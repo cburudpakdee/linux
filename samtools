@@ -12,4 +12,6 @@ samtools view BT363-GSC.bam | LC_ALL=C grep "xf:i:25" > body_filtered_sam
 #---extract BAM header
 samtools view -H BT363-GSC.bam > header_filtered_sam
 #---concatenate isolated BAM read and BAM header
+cat header_filtered_sam body_filtered_sam > BT363-GSC_filtered.sam
+
 
