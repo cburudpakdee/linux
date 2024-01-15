@@ -2,3 +2,4 @@
 #-----go into samtools folder
 cd samtools-1.x
 ./configure
+make
