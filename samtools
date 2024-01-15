@@ -35,5 +35,8 @@ samtools view BT363-GSC_filtered.bam | cut -f 12- | grep "CB:Z:CACACCTTCCAAGCCG"
 #----------------------------------------------------
 #---counts barcodes
 wc -l cell_barcode.txt
+#----sort bam files
+samtools sort -o *.bam BT363-GSC_filtered.bam
+#----index bam???
 
 
