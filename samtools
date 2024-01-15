@@ -9,3 +9,7 @@ export PATH=/home/deviancedev/Desktop/drive_jan2024/samtools_linux/samtools-1.19
 samtools
 #---isolate BAM reads that contribute to UMI counting
 samtools view BT363-GSC.bam | LC_ALL=C grep "xf:i:25" > body_filtered_sam
+#---extract BAM header
+samtools view -H BT363-GSC.bam > header_filtered_sam
+#---concatenate isolated BAM read and BAM header
+
