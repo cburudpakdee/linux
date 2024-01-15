@@ -4,3 +4,5 @@ cd samtools-1.x
 ./configure
 make
 sudo make install
+export PATH=/home/deviancedev/Desktop/drive_jan2024/samtools_linux/samtools-1.19/bin:$PATH
+samtools
