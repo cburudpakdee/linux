@@ -16,5 +16,11 @@ cat header_filtered_sam body_filtered_sam > BT363-GSC_filtered.sam
 #----convert SAM to BAM
 samtools view -b BT363-GSC_filtered.sam > BT363-GSC_filtered.bam
 samtools view BT363-GSC_filtered.bam
+samtools view pbmc_1k_v3_possorted_genome_bam_filterd.bam | cut -f 12- | tr "\t" "\n" | grep "CB:Z:" | uniq > cell_barcodes.txt
+# cut -f 12-                                                    Remove first 12 columns SAM file
+# tr "\t" "\n"                                                  Replace all tabs with a new line 
+# grep 'CB:Z:'                                                  Grep lines that start with CB:Z
+# uniq                                                          Omit repeated lines
+#-----------------------------------------------------------
 
 
