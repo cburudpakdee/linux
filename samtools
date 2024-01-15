@@ -33,5 +33,7 @@ samtools view pbmc_1k_v3_possorted_genome_bam_filterd.bam | cut -f 12- | grep "C
 # awk "{count[$1]++} END {for(j in count) print count[j], j}"    Count occurence of each barcode
 # sort -nr`                                                      Sort numerically and in reverse order
 #----------------------------------------------------
+#---counts barcodes
+wc -l cell_barcode.txt
 
 
