@@ -6,3 +6,5 @@ make
 sudo make install
 export PATH=/home/deviancedev/Desktop/drive_jan2024/samtools_linux/samtools-1.19/bin:$PATH
 samtools
+#---isolate BAM reads that contribute to UMI counting
+samtools view BT363-GSC.bam | LC_ALL=C grep "xf:i:25" > body_filtered_sam
