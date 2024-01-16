@@ -38,6 +38,47 @@ alevin-fry quant -t 16 -i /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/
 
 #---make features.tsv in using biomaRt
 #----replace all empty fields with NA in file
+#---------------------------------------------------------------------------------------------------------------------
+library(biomaRt)
+library(dplyr)
+setwd('/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon')
+matrix <- read.csv('features.csv',header = FALSE)
+dim(matrix)
+colnames(matrix)[1]<-'Gene'
+#---set host to https://useast.ensembl.org or https://uswest.ensembl.org
+#---------------------------------------------------------------------
+Sys.setenv("http_proxy"="http://my.proxy.org:9999")
+listMarts()
+ensembl=useMart("ensembl")
+listDatasets(ensembl)
+ensembl=useDataset("hsapiens_gene_ensembl",mart = ensembl)
+filters = listFilters(ensembl)
+attributes=listAttributes(ensembl)
+#-----------------------------------------------------------------
+dim(matrix)
+geneid <- matrix$Gene
+head(geneid)
+dim(geneid)
+listFilters(ensembl)
+listAttributes(ensembl)
+genes <-getBM(attributes = c('ensembl_gene_id','external_gene_name'),
+              filters = 'ensembl_gene_id',
+              values = geneid,
+              mart = ensembl,
+              uniqueRows = FALSE)
+head(genes)
+colnames(genes)[1]<-'Gene'
+MATRIX<-merge(matrix,genes,by='Gene',all=TRUE)
+MATRIX$external_gene_name<-sub("^$","NA",MATRIX$external_gene_name)
+
+write_tsv(MATRIX,file='pilot_features.tsv')
+break
+#---------------------------------------------------------------------------------------------------------------
+#---Be sure to transpose the sparse matrix in seurat
+
+matrix <- ReadMtx(mtx= matrix_path, features = features_path, cells= barcodes_path,mtx.transpose = TRUE)
+
+#---all good...?
 
 
 
