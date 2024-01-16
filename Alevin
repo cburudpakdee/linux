@@ -1,8 +1,3 @@
-#----you need to download gencode.v45.basic.annotation.gtf.gz
-#----making a transcript_to_gene.tsv file:
-#-----delete the first 5 lines from file
-sed '1,5d' gencode.v45.basic.annotation.txt > transcript_to_gene.tsv
-#-----rename .tsv > .csv and extract the ensembl gene id versions or ensembl gene transcript id versions. 
-#-----realign transcript versions with gene names in biomaRt
+https://combine-lab.github.io/alevin-fry-tutorials/2021/running-alevin-fry-fast/
 
 
