@@ -17,5 +17,7 @@ make release
 salmon index -t /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/transcriptome.fa -i grch38_idx -p 7
 
 #---generate transcript to gene file
+awk '{if($3=="transcript") {OFS="\t"; print $14, $10} }' *./refdata-gex-GRCh38-2020-A/genes/genes.gtf | sed 's/[;\"]//g' > t2g.tsv
+
 
 
