@@ -1,0 +1,2 @@
+pip install requests --upgrade
+#---useful if getting JSONDecodeError
