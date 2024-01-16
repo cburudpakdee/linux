@@ -36,7 +36,8 @@ alevin-fry collate -t 16 -i *./pbmc_10k_v3_quant -r *./pbmc_10k_v3_map
 #---quantify UMIs per-gene and per-cell
 alevin-fry quant -t 16 -i /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_quant -o /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_quant --tg-map /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/t2g.tsv --resolution cr-like --use-mtx
 
-#---Jesus christ...........
+#---make features.tsv in using biomaRt
+#----replace all empty fields with NA in file
 
 
 
