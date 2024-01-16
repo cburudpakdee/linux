@@ -33,6 +33,9 @@ alevin-fry generate-permit-list -d fw -k -i *./pbmc_10k_v3_map -o pbmc_10k_v3_qu
 #---collate files
 alevin-fry collate -t 16 -i *./pbmc_10k_v3_quant -r *./pbmc_10k_v3_map
 
+#---quantify UMIs per-gene and per-cell
+
+
 
 
 
