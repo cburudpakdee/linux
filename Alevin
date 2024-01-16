@@ -30,6 +30,11 @@ export PATH=/path_to_alevin/bin:$PATH
 #---generate a permit list of barcodes
 alevin-fry generate-permit-list -d fw -k -i *./pbmc_10k_v3_map -o pbmc_10k_v3_quant
 
+#---collate files
+alevin-fry collate -t 16 -i *./pbmc_10k_v3_quant -r *./pbmc_10k_v3_map
+
+
+
 
 
 
