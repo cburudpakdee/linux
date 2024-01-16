@@ -19,6 +19,8 @@ salmon index -t /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-ge
 #---generate transcript to gene file
 awk '{if($3=="transcript") {OFS="\t"; print $14, $10} }' *./refdata-gex-GRCh38-2020-A/genes/genes.gtf | sed 's/[;\"]//g' > t2g.tsv
 
+#-----------------START HERE IF YOU HAVE INDEX
+
 #---map reads to index
 salmon alevin -i /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/index/grch38_idx -p 16 -l IU --chromiumV3 --sketch -1 /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_fastqs/pbmc_10k_v3_S1_L001_R1_001.fastq.gz -2 /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_fastqs/pbmc_10k_v3_S1_L001_R2_001.fastq.gz -o pbmc_10k_v3_map
 
