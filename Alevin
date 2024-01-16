@@ -16,3 +16,6 @@ make release
 #-----build the index-- max threads is 7
 salmon index -t /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/transcriptome.fa -i grch38_idx -p 7
 
+#---generate transcript to gene file
+
+
