@@ -1,3 +1,7 @@
 #---https://combine-lab.github.io/alevin-fry-tutorials/2021/running-alevin-fry-fast/
 wget https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-GRCh38-2020-A.tar.gz
 tar xzf refdata-gex-GRCh38-2020-A.tar.gz
+./gffread -w /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/transcriptome.fa -g /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/fasta/genome.fa /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/genes/genes.gtf
+
+#---go into refdata-gex-GRCh38-2020-A folder
+mkdir 
