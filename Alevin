@@ -44,6 +44,7 @@ alevin-fry quant -t 16 -i /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/
 #---------------------------------------------------------------------------------------------------------------------
 library(biomaRt)
 library(dplyr)
+library(readr)
 setwd('/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon')
 matrix <- read.csv('features.csv',header = FALSE)
 dim(matrix)
