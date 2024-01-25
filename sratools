@@ -2,3 +2,4 @@
 #--go into bin folder 
 export PATH=/home/deviancedev/Desktop/drive_jan2024/sra_tools/sratoolkit.3.0.10-ubuntu64/bin:$PATH
 fastq-dump -h
+prefetch SRR7984673
