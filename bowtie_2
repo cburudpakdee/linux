@@ -1,3 +1,4 @@
+#---download latest file from https://sourceforge.net/projects/bowtie-bio/ and unpack
 mkdir bowtie2
 cd bowtie2
-conda install bowtie2 -c bioconda
+export PATH=/home/deviancedev/Desktop/drive_jan2024/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
