@@ -21,7 +21,7 @@ samtools view -Sb NSC.SRR18324536.sam > NSC.SRR18324536.bam
 samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 
 #---sort bam 
-samtools sort 
+samtools sort *.bam -o name_sorted.bam
 
 #-----HAVE TO DO ANOTHER CONDITION only have NSC.SOX11 need MB.SOX11
 https://star-protocols.cell.com/protocols/2708
