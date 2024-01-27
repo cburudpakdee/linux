@@ -11,3 +11,10 @@ bowtie2-build -f /home/deviancedev/Desktop/drive_jan2024/bowtie2/GRCh38_genome/G
 
 #----run bowtie2
 bowtie2 -x /home/deviancedev/Desktop/drive_jan2024/bowtie2/GRCh38_genome/test_out -1 NSC.SRR18324536_1.fastq -2 NSC.SRR18324536_2.fastq -S NSC.SRR18324536.sam
+
+samtools head NSC.SRR18324536.sam
+
+#---convert to bam 
+samtools view -Sb NSC.SRR18324536.sam > NSC.SRR18324536.bam
+
+#---sort bam 
