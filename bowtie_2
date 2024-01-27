@@ -24,5 +24,6 @@ samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 samtools sort 
 
 #-----HAVE TO DO ANOTHER CONDITION only have NSC.SOX11 need MB.SOX11
-
+https://star-protocols.cell.com/protocols/2708
+next have to do MACS3 with conditions 
 
