@@ -17,4 +17,12 @@ samtools head NSC.SRR18324536.sam
 #---convert to bam 
 samtools view -Sb NSC.SRR18324536.sam > NSC.SRR18324536.bam
 
+#---remove duplicates  -s single -S paired
+samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
+
 #---sort bam 
+samtools sort 
+
+#-----HAVE TO DO ANOTHER CONDITION only have NSC.SOX11 need MB.SOX11
+
+
