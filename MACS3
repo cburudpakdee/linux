@@ -1,5 +1,3 @@
-macs3 callpeak -t sort.index.exp.mel.myc.bam -c sort.index.inputCTRL.mel.myc.bam -g hs -n test -B -q 0.01
-
 -t = exp datafile
 -c = control datafile
 -f = format
@@ -7,3 +5,5 @@ macs3 callpeak -t sort.index.exp.mel.myc.bam -c sort.index.inputCTRL.mel.myc.bam
 -n = prefix string for output files
 -B = store as bedgraph file ie .bdg
 -q = q-value (FDR) cutoff
+
+macs3 callpeak -t /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR18324540/MB.SOX11.SRR18324540_filtered_rmdup_sorted.bam  -c /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR18324536/NSC.SOX11.SRR18324536_filtered_rmdup_sorted.bam -g hs -n MBvNSC.chipseq -B -q 0.01
