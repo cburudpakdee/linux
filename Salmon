@@ -10,4 +10,8 @@ salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_i
 
 grep -c '^>' GRCm39.genome.fa.gz
 
+extract GRCm39.genome.fa.gz
+cut -d " " -f 1 GRCm39.genome.fa > decoys.txt
+
+
 
