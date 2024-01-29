@@ -14,6 +14,13 @@ extract GRCm39.genome.fa.gz
 grep "^>" <(gunzip -c GRCm39.genome.fa.gz) | cut -d " " -f 1 >Decoys.txt
 
 #---next cat genome and transcriptome
+cat gencode.vM34.transcripts.fa.gz GRCm39.genome.fa.gz > GRCm39_gentrome.fa.gz
+
+#---genome indexing 
+salmon index -t GRCm39_gentrome.fa.gz -d Decoys.txt -i GRCm39_salmon_index
+
+#---FINISH INDEXING, THINK THIS MAY WORK
+
 https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
 
 
