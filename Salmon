@@ -11,7 +11,9 @@ salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_i
 grep -c '^>' GRCm39.genome.fa.gz
 
 extract GRCm39.genome.fa.gz
-cut -d " " -f 1 GRCm39.genome.fa > decoys.txt
+grep "^>" <(gunzip -c GRCm39.genome.fa.gz) | cut -d " " -f 1 >Decoys.txt
 
+#---next cat genome and transcriptome
+https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
 
 
