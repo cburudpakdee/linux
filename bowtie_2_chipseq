@@ -24,5 +24,7 @@ samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 samtools sort *.bam -o name_sorted.bam
 
 #---have to download macs3 and run bam file comparisons
+USE GSE198565_MB_G4 FILE TO COMPLETE 
+
 
 https://star-protocols.cell.com/protocols/2708
