@@ -19,6 +19,16 @@ cat gencode.vM34.transcripts.fa.gz GRCm39.genome.fa.gz > GRCm39_gentrome.fa.gz
 #---genome indexing 
 salmon index -t /home/deviancedev/Desktop/drive_jan2024/GRCm39/GRCm39_gentrome.fa.gz -i transcripts_index --decoys /home/deviancedev/Desktop/drive_jan2024/GRCm39/Decoys.txt -k 31 --gencode
 
+#---make salmon version json file for index folder:
+{
+    "indexVersion": 5,
+    "hasAuxIndex": false,
+    "auxKmerLength": 31,
+    "indexType": 2,
+    "salmonVersion": "1.10.2"
+}
+
+
 https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
 
 
