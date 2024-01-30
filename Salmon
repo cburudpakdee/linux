@@ -16,8 +16,8 @@ grep "^>" <(gunzip -c GRCm39.genome.fa.gz) | cut -d " " -f 1 >Decoys.txt
 #---next cat genome and transcriptome
 cat gencode.vM34.transcripts.fa.gz GRCm39.genome.fa.gz > GRCm39_gentrome.fa.gz
 
-#---genome indexing 
-salmon index -t /home/deviancedev/Desktop/drive_jan2024/GRCm39/GRCm39_gentrome.fa.gz -i transcripts_index --decoys /home/deviancedev/Desktop/drive_jan2024/GRCm39/Decoys.txt -k 31
+#---genome indexing with Gencode files 
+salmon index -t /home/deviancedev/Desktop/drive_jan2024/GRCm39/GRCm39_gentrome.fa.gz -i transcripts_index --decoys /home/deviancedev/Desktop/drive_jan2024/GRCm39/Decoys.txt -k 31 --gencode
 
 https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
 
