@@ -5,7 +5,7 @@ salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_i
 --validateMappings -o norm1_salmon
 
 #--------------------------------------
-#--------build the transcriptome index test
+#--------build the transcriptome index with Gencode files
 #------count number of sequences in genome.fa.gz file
 
 grep -c '^>' GRCm39.genome.fa.gz
@@ -16,7 +16,7 @@ grep "^>" <(gunzip -c GRCm39.genome.fa.gz) | cut -d " " -f 1 >Decoys.txt
 #---next cat genome and transcriptome
 cat gencode.vM34.transcripts.fa.gz GRCm39.genome.fa.gz > GRCm39_gentrome.fa.gz
 
-#---genome indexing with Gencode files 
+#---genome indexing 
 salmon index -t /home/deviancedev/Desktop/drive_jan2024/GRCm39/GRCm39_gentrome.fa.gz -i transcripts_index --decoys /home/deviancedev/Desktop/drive_jan2024/GRCm39/Decoys.txt -k 31 --gencode
 
 https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
