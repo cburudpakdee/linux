@@ -1,4 +1,6 @@
 tar -zxvf seqkit_linux_386.tar.gz
 sudo cp seqkit /usr/local/bin/
+
+#------remember split is per read file so 98M per R1/R2
 seqkit split2 -1 *.R1 -2 *.R2 -s 9800000 -O out -f -e .gz
 
