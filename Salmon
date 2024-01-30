@@ -6,11 +6,11 @@ salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_i
 
 #--------------------------------------
 #--------build the transcriptome index with Gencode files
-#------count number of sequences in genome.fa.gz file
 
+#------count number of sequences in genome.fa.gz file
 grep -c '^>' GRCm39.genome.fa.gz
 
-extract GRCm39.genome.fa.gz
+#----make Decoys.txt one column list of chromosomes
 grep "^>" <(gunzip -c GRCm39.genome.fa.gz) | cut -d " " -f 1 >Decoys.txt
 
 #---next cat genome and transcriptome
