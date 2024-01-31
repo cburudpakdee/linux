@@ -5,5 +5,5 @@ sudo cp seqkit /usr/local/bin/
 seqkit split2 -1 *.R1 -2 *.R2 -s 9800000 -O out -f -e .gz
 
 #---count reads to confirm splits
-
+echo $(zcat *.fastq.gz|wc -l)/4|bc
 
