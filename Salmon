@@ -15,8 +15,5 @@ cat gencode.vM34.transcripts.fa.gz GRCm39.primary_assembly.genome.fa.gz > GRCm39
 #---genome indexing 
 salmon index -t GRCm39_gentrome.fa.gz -i salmon_index --decoys decoys.txt -k 31 --gencode
 
-salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_index/default 
--l IU -1 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R1.fastq.gz 
--2 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R2.fastq.gz 
---validateMappings -o norm1_salmon
+salmon quant -i salmon_index -l IU -1 norm1_R1.fastq.gz -2 norm1_R2.fastq.gz --validateMappings -o output_files
 
