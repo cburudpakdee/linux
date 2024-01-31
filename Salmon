@@ -1,11 +1,6 @@
 conda activate salmon
-salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_index/default 
--l IU -1 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R1.fastq.gz 
--2 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R2.fastq.gz 
---validateMappings -o norm1_salmon
 
-#--------------------------------------
-#--------build the transcriptome index with Gencode files
+#--------REBOOT AND CLOSE ALL OTHER APPS then build the transcriptome index with Gencode files
 
 #------count number of sequences in genome.fa.gz file
 grep -c '^>' GRCm39.primary_assembly.genome.fa.gz
@@ -20,16 +15,8 @@ cat gencode.vM34.transcripts.fa.gz GRCm39.primary_assembly.genome.fa.gz > GRCm39
 #---genome indexing 
 salmon index -t GRCm39_gentrome.fa.gz -i salmon_index --decoys decoys.txt -k 31 --gencode
 
-#---make salmon version json file for index folder:
-{
-    "indexVersion": 5,
-    "hasAuxIndex": false,
-    "auxKmerLength": 31,
-    "indexType": 2,
-    "salmonVersion": "1.10.2"
-}
-
-
-https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
-
+salmon quant -i /home/deviancedev/Desktop/genome_folder/alias/mm10_cdna/salmon_index/default 
+-l IU -1 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R1.fastq.gz 
+-2 /home/deviancedev/Desktop/drive_nov2023/FCCC/alignments/finals/norm1_R2.fastq.gz 
+--validateMappings -o norm1_salmon
 
