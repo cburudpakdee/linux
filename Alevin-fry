@@ -12,12 +12,10 @@ git clone https://github.com/gpertea/gffread
 cd gffread
 make release
 
-
-
-
 #----extract transcriptome and GTF file that encodes transcripts
-./gffread -w /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/transcriptome.fa -g /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/fasta/genome.fa /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/genes/genes.gtf
+gffread -w refdata-gex-GRCh38-2020-A/transcriptome.fa -g refdata-gex-GRCh38-2020-A/fasta/genome.fa refdata-gex-GRCh38-2020-A/genes/genes.gtf
 
+break 
 #-----build the index-- max threads is 7
 salmon index -t /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/transcriptome.fa -i grch38_idx -p 7
 
