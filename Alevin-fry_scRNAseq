@@ -36,7 +36,7 @@ salmon alevin -i grch38_idx -p 16 -l IU --chromiumV3 --sketch
 export PATH=/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/linux-64_alevin-fry/bin:$PATH
 alevin-fry generate-permit-list -d fw -k -i *./pbmc_map -o pbmc_quant
 
-#---collate files------ map.collated.rad file will be in map folder
+#---collate files-----will be in quant folder
 alevin-fry collate -t 16 -i pbmc_quant -r pbmc_map
 
 #---get final counts
