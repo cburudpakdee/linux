@@ -26,72 +26,15 @@ awk '{if($3=="transcript") {OFS="\t"; print $14, $10} }' genes.gtf | sed 's/[;\"
 export PATH=/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/bin:$PATH
 
 #---map reads to index
-salmon alevin -i grch38_idx -p 16 -l IU --chromiumV3 --sketch -1 pbmc_10k_v3_S1_L001_R1_001.fastq.gz -2 pbmc_10k_v3_S1_L001_R2_001.fastq.gz -o pbmc_10k_v3_map
+salmon alevin -i grch38_idx -p 16 -l IU --chromiumV3 --sketch 
+-1 pbmc_10k_v3_S1_L001_R1_001.fastq.gz pbmc_10k_v3_S1_L002_R1_001.fastq.gz 
+-2 pbmc_10k_v3_S1_L001_R2_001.fastq.gz pbmc_10k_v3_S1_L002_R2_001.fastq.gz 
+-o pbmc_map 
+--tgMap /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/fasta/t2g.tsv
 
 #---generate a permit list of barcodes --files will be in quant folder
+export PATH=/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/linux-64_alevin-fry/bin:$PATH
 alevin-fry generate-permit-list -d fw -k -i *./pbmc_10k_v3_map -o pbmc_10k_v3_quant
 
 #---collate files------ map.collated.rad file will be in map folder
 alevin-fry collate -t 16 -i *./pbmc_10k_v3_quant -r *./pbmc_10k_v3_map
-
-
-
-
-
-
-
-START HERE TO REDO!!!!! do not use --use-mtx
-
-#---quantify UMIs per-gene and per-cell
-alevin-fry quant -t 16 -i /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_quant -o /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/pbmc_10k_v3_quant --tg-map /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/t2g.tsv --resolution cr-like --use-mtx
-
-#---make features.tsv in using biomaRt
-#----replace all empty fields with NA in file
-#---------------------------------------------------------------------------------------------------------------------
-library(biomaRt)
-library(dplyr)
-library(readr)
-setwd('/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon')
-matrix <- read.csv('features.csv',header = FALSE)
-dim(matrix)
-colnames(matrix)[1]<-'Gene'
-#---set host to https://useast.ensembl.org or https://uswest.ensembl.org
-#---------------------------------------------------------------------
-Sys.setenv("http_proxy"="http://my.proxy.org:9999")
-listMarts()
-ensembl=useMart("ensembl")
-listDatasets(ensembl)
-ensembl=useDataset("hsapiens_gene_ensembl",mart = ensembl)
-filters = listFilters(ensembl)
-attributes=listAttributes(ensembl)
-#-----------------------------------------------------------------
-dim(matrix)
-geneid <- matrix$Gene
-head(geneid)
-dim(geneid)
-listFilters(ensembl)
-listAttributes(ensembl)
-genes <-getBM(attributes = c('ensembl_gene_id','external_gene_name'),
-              filters = 'ensembl_gene_id',
-              values = geneid,
-              mart = ensembl,
-              uniqueRows = FALSE)
-head(genes)
-colnames(genes)[1]<-'Gene'
-MATRIX<-merge(matrix,genes,by='Gene',all=TRUE)
-MATRIX$external_gene_name<-sub("^$","NA",MATRIX$external_gene_name)
-
-write_tsv(MATRIX,file='pilot_features.tsv')
-break
-#---------------------------------------------------------------------------------------------------------------
-#---Be sure to transpose the sparse matrix in seurat
-
-matrix <- ReadMtx(mtx= matrix_path, features = features_path, cells= barcodes_path,mtx.transpose = TRUE)
-
-#---all good...?
-
-
-
-
-
-
