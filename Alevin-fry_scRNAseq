@@ -25,7 +25,7 @@ awk '{if($3=="transcript") {OFS="\t"; print $14, $10} }' genes.gtf | sed 's/[;\"
 
 export PATH=/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/bin:$PATH
 
-#---map reads to index
+#---Run in Alevin_Salmon folder
 salmon alevin -i grch38_idx -p 16 -l IU --chromiumV3 --sketch 
 -1 pbmc_10k_v3_S1_L001_R1_001.fastq.gz pbmc_10k_v3_S1_L002_R1_001.fastq.gz 
 -2 pbmc_10k_v3_S1_L001_R2_001.fastq.gz pbmc_10k_v3_S1_L002_R2_001.fastq.gz 
@@ -34,7 +34,7 @@ salmon alevin -i grch38_idx -p 16 -l IU --chromiumV3 --sketch
 
 #---generate a permit list of barcodes --files will be in quant folder
 export PATH=/home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/linux-64_alevin-fry/bin:$PATH
-alevin-fry generate-permit-list -d fw -k -i *./pbmc_10k_v3_map -o pbmc_10k_v3_quant
+alevin-fry generate-permit-list -d fw -k -i *./pbmc_map -o pbmc_quant
 
 #---collate files------ map.collated.rad file will be in map folder
-alevin-fry collate -t 16 -i *./pbmc_10k_v3_quant -r *./pbmc_10k_v3_map
+alevin-fry collate -t 16 -i pbmc_quant -r pbmc_map
