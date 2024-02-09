@@ -38,3 +38,8 @@ alevin-fry generate-permit-list -d fw -k -i *./pbmc_map -o pbmc_quant
 
 #---collate files------ map.collated.rad file will be in map folder
 alevin-fry collate -t 16 -i pbmc_quant -r pbmc_map
+
+#---get final counts
+alevin-fry quant -t 16 -i pbmc_quant -o pbmc_quant 
+--tg-map /home/deviancedev/Desktop/drive_jan2024/Alevin_Salmon/refdata-gex-GRCh38-2020-A/fasta/t2g.tsv 
+--resolution cr-like --use-mtx
