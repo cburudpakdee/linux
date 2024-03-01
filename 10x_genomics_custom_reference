@@ -1,4 +1,0 @@
-#----go to ensembl site and download the GTF and cdna files 
-
-#----filter GTF for protein-coding genes only
-cellranger mkgtf Mus_musculus.GRCm39.111.gtf GRCm39_filtered.gtf --attribute=gene_biotype:protein_coding
