@@ -1,11 +1,9 @@
-#---download latest file from https://sourceforge.net/projects/bowtie-bio/ and unpack
-mkdir bowtie2
-cd bowtie2
-export PATH=/home/deviancedev/Desktop/drive_jan2024/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
-bowtie2 -h
-#----download latest version of genome.fa file
+wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-sra-linux-x86_64.zip/download
+unzip download
+export PATH=/home/em_b/bowtie2-2.5.3-sra-linux-x86_64:$PATH
+bowtie2 --help
 #----build the index
-bowtie2-build -f /home/deviancedev/Desktop/drive_jan2024/bowtie2/GRCh38_genome/GRCh38.p14.genome.fa.gz index
+bowtie2-build -f GRCh38.p14.genome.fa.gz index
 #---THIS TAKES HOURS TO COMPLETE
 #---clean up fastq files
 
