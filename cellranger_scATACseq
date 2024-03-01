@@ -18,5 +18,12 @@ export PATH=/home/em_b/cellranger/scatacseq/cellranger-atac-2.1.0:$PATH
 
 cellranger-atac
 
+cellranger-atac testrun --id=tiny
+
+tar -zxvf bcl2fastq2-v2.20.0.422-Source.tar.gz
+rm -r bcl2fastq2-v2.20.0.422-Source.tar.gz
+cd bcl2fastq/
+
+
 
   
