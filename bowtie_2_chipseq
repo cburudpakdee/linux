@@ -5,7 +5,8 @@ bowtie2 --help
 #----build the index using gencode primary assembly
 bowtie2-build -f GRCh38.p14.genome.fa.gz index
 #---clean up fastq files
-#----run bowtie2
+
+#----run bowtie2 --remember to set number of threads to use 
 #-----point x to GRCh38_index folder with name on all bt2 files ie 'index'
 bowtie2 -x /home/em_b/bowtie2/GRCh38_index/index -1 demux_completematch_SRR18324550_2.fastq.gz -2 demux_completematch_SRR18324550_4.fastq.gz -S demux_completematch_SRR18324550.sam
 samtools head NSC.SRR18324536.sam
