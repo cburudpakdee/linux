@@ -1,4 +1,6 @@
 #---get package from https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
+wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+
 #--go into bin folder 
 export PATH=/home/deviancedev/Desktop/drive_jan2024/sra_tools/sratoolkit.3.0.10-ubuntu64/bin:$PATH
 fastq-dump -h
