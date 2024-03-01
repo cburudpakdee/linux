@@ -7,8 +7,7 @@ bowtie2-build -f GRCh38.p14.genome.fa.gz index
 #---clean up fastq files
 #----run bowtie2
 #-----point x to GRCh38_index folder with name on all bt2 files ie 'index'
-bowtie2 -x /home/deviancedev/Desktop/drive_jan2024/bowtie2/GRCh38_genome/test_out -1 NSC.SRR18324536_1.fastq -2 NSC.SRR18324536_2.fastq -S NSC.SRR18324536.sam
-
+bowtie2 -x /home/em_b/bowtie2/GRCh38_index/index -1 demux_completematch_SRR18324550_2.fastq.gz -2 demux_completematch_SRR18324550_4.fastq.gz -S demux_completematch_SRR18324550.sam
 samtools head NSC.SRR18324536.sam
 
 #---convert to bam 
