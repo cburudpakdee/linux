@@ -15,7 +15,7 @@ cd bcl2fastq/
 mkdir BUILD
 cd BUILD
 chmod ugo+x /home/em_b/cellranger/bcl2fastq/src/configure
-
+chmod ugo+x /home/em_b/cellranger/bcl2fastq/src/cmake/bootstrap/installCmake.sh
 
 
   
