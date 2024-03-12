@@ -6,11 +6,10 @@ cd linux-64_alevin-fry-0.8.2-h4ac6f70_0/
 wget https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-GRCh38-2020-A.tar.gz
 tar xzf refdata-gex-GRCh38-2020-A.tar.gz
 
-#---go into refdata-gex-GRCh38-2020-A folder
 #----build gffread
 git clone https://github.com/gpertea/gffread
 cd gffread
-make release
+export PATH=/home/em_b/gffread:$PATH
 
 #----extract transcriptome
 gffread -w refdata-gex-GRCh38-2020-A/transcriptome.fa -g refdata-gex-GRCh38-2020-A/fasta/genome.fa refdata-gex-GRCh38-2020-A/genes/genes.gtf
