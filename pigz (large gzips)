@@ -1,0 +1,2 @@
+sudo apt-get install -y pigz
+pigz -p 24 <file> 
