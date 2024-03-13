@@ -3,4 +3,4 @@ tar -zxvf sratoolkit.current-ubuntu64.tar.gz
 rm -r sratoolkit.current-ubuntu64.tar.gz 
 export PATH=/home/em_b/sratoolkit.3.0.10-ubuntu64/bin:$PATH
 fastq-dump --help
-prefetch 
+prefetch <SRR---> --max-size 80gb
