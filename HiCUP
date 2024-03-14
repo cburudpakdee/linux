@@ -18,7 +18,13 @@ hicup --example
 #---run the HiCUP pipeline
 hicup --config hicup_example.conf
 
-WTF DO WE DO WITH THE BAM FILES?!!?!?!?!?!
-https://arimagenomics.com/wp-content/files/Bioinformatics-User-Guide-for-Visualization-of-Arima-HiC-Data-with-HiGlass-in-a-Mac-or-Linux-Based-OS.pdf
+ref: https://arimagenomics.com/wp-content/files/Bioinformatics-User-Guide-for-Visualization-of-Arima-HiC-Data-with-HiGlass-in-a-Mac-or-Linux-Based-OS.pdf
+
+git clone https://github.com/4dn-dcic/pairix
+cd pairix
+make
+
+#--bam2pairs converts HiCUP bams into pairs file
+*/pairix/util/bam2pairs/bam2pairs and export to PATH
 
 
