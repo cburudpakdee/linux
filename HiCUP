@@ -4,7 +4,7 @@ tar -xvzf hicup_v0.X.Y.tar.gz
 
 chmod a+x /Users/burudpc/Desktop/HiCUP/HiCUP-0.9.2
 
-export PATH=/Users/burudpc/Desktop/HiCUP/HiCUP-0.9.2:$PATH
+export PATH=/home/em_b/HiCUP-0.9.2:$PATH
 
 hicup --help
 
