@@ -12,3 +12,11 @@ bowtie2-build -f /Users/burudpc/Desktop/gencode/GRCm39.primary_assembly.genome.f
 
 hicup_digester --genome GRCm39 --arima /Users/burudpc/Desktop/gencode/GRCm39.primary_assembly.genome.fa
 
+#---fill int configuration parameter in text editor
+hicup --example
+
+#---run the HiCUP pipeline
+hicup --config hicup_example.conf
+
+
+
