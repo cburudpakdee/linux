@@ -10,6 +10,5 @@ hicup --help
 
 bowtie2-build -f /Users/burudpc/Desktop/gencode/GRCm39.primary_assembly.genome.fa GRCm39_bwt2_index
 
-hicup_digester --genome GRCm39 --re1 ^GATC,DpnII:G^ANTC,Hinfl 
-
+hicup_digester --genome GRCm39 --arima /Users/burudpc/Desktop/gencode/GRCm39.primary_assembly.genome.fa
 
