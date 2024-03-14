@@ -27,4 +27,4 @@ make
 #--bam2pairs converts HiCUP bams into pairs file
 */pairix/util/bam2pairs/bam2pairs and export to PATH
 
-
+bam2pairs -c mm39.chrom.sizes SRR26855487_R1_2.hicup.bam test
