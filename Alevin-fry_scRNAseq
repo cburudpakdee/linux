@@ -5,7 +5,7 @@ tar xzf refdata-gex-GRCh38-2020-A.tar.gz
 #----build gffread
 git clone https://github.com/gpertea/gffread
 cd gffread
-export PATH=/home/em_b/gffread:$PATH
+make release
 
 #----extract transcriptome
 gffread -w refdata-gex-GRCh38-2020-A/transcriptome.fa -g refdata-gex-GRCh38-2020-A/fasta/genome.fa refdata-gex-GRCh38-2020-A/genes/genes.gtf
