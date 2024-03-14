@@ -7,3 +7,9 @@ chmod a+x /Users/burudpc/Desktop/HiCUP/HiCUP-0.9.2
 export PATH=/Users/burudpc/Desktop/HiCUP/HiCUP-0.9.2:$PATH
 
 hicup --help
+
+bowtie2-build -f /Users/burudpc/Desktop/gencode/GRCm39.primary_assembly.genome.fa GRCm39_bwt2_index
+
+hicup_digester --genome GRCm39 --re1 ^GATC,DpnII:G^ANTC,Hinfl 
+
+
