@@ -29,3 +29,6 @@ make
 
 #--get chrom.sizes file from UCSC
 bam2pairs -c mm39.chrom.sizes SRR26855487_R1_2.hicup.bam test
+
+pip install cooler
+
