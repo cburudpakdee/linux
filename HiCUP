@@ -37,3 +37,9 @@ pip install cooler
 
 cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 mm39.chrom.sizes:1000 pairs_out.bsorted.pairs fuckingwork.cool
 
+consider HOMER HiC PCA plotting
+http://homer.ucsd.edu/homer/interactions2/HiCpca.html
+
+and Marge
+https://robertamezquita.github.io/marge/
+
