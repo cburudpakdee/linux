@@ -18,6 +18,9 @@ hicup --example
 #---run the HiCUP pipeline
 hicup --config hicup_example.conf
 
+#--remove chrM from bam
+samtools view -h SRR26855487_R1_2.hicup.bam | awk '{if($3 != "chrM" && $3 != "chrUn"){print $0}}' | samtools view -Shb - > SRR26855487_filtered.bam
+
 ref: https://arimagenomics.com/wp-content/files/Bioinformatics-User-Guide-for-Visualization-of-Arima-HiC-Data-with-HiGlass-in-a-Mac-or-Linux-Based-OS.pdf
 
 git clone https://github.com/4dn-dcic/pairix
@@ -25,10 +28,12 @@ cd pairix
 make
 
 #--bam2pairs converts HiCUP bams into pairs file
-*/pairix/util/bam2pairs/bam2pairs and export to PATH
+export PATH=/home/dev/pairix/util/bam2pairs:$PATH
 
 #--get chrom.sizes file from UCSC
-bam2pairs -c mm39.chrom.sizes SRR26855487_R1_2.hicup.bam test
+bam2pairs -c mm39.chrom.sizes SRR26855487_filtered.bam pairs_out
 
 pip install cooler
+
+cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 mm39.chrom.sizes:1000 pairs_out.bsorted.pairs fuckingwork.cool
 
