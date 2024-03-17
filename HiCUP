@@ -24,8 +24,10 @@ hicup --config hicup_example.conf
 head muTh1_R1_2.hicup.sam 
 samtools view -bS muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
 
+samtools view -H muTh1_R1_2.hicup.bam
+
 #--remove chrM from bam
-######samtools view -h SRR26855487_R1_2.hicup.bam | awk '{if($3 != "chrM" && $3 != "chrUn"){print $0}}' | samtools view -Shb - > SRR26855487_filtered.bam
+samtools view -h SRR26855487_R1_2.hicup.bam | awk '{if($3 != "chrM" && $3 != "chrUn"){print $0}}' | samtools view -Shb - > SRR26855487_filtered.bam
 
 ref: https://arimagenomics.com/wp-content/files/Bioinformatics-User-Guide-for-Visualization-of-Arima-HiC-Data-with-HiGlass-in-a-Mac-or-Linux-Based-OS.pdf
 
