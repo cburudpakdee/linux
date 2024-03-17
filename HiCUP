@@ -18,6 +18,12 @@ hicup --example
 #---run the HiCUP pipeline
 hicup --config hicup_example.conf
 
+#---convert sam to bam 
+
+#-- has header use
+head muTh1_R1_2.hicup.sam 
+samtools view -bS muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
+
 #--remove chrM from bam
 ######samtools view -h SRR26855487_R1_2.hicup.bam | awk '{if($3 != "chrM" && $3 != "chrUn"){print $0}}' | samtools view -Shb - > SRR26855487_filtered.bam
 
