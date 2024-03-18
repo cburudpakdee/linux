@@ -13,4 +13,4 @@ seqkit split2 -1 /home/em_b/Desktop/HiCUP/SRR21038697/SRR21038697filtered_R1.fas
 
 #---trim each read file separately
 homerTools trim -3 GATC -mis 0 -matchStart 20 -min 20 SRR21038697filtered_R1.part_001.fastq.gz
-
+homerTools trim -3 GATC -mis 0 -matchStart 20 -min 20 SRR21038697filtered_R2.part_001.fastq.gz
