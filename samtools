@@ -1,42 +1,12 @@
-#-----download from http://www.htslib.org/download/
-#-----go into samtools folder
-cd samtools-1.x
-./configure
-make
-sudo make install
-export PATH=/home/deviancedev/Desktop/drive_jan2024/samtools_linux/samtools-1.19/bin:$PATH
-#---start with BAM files that are already QC'd
-samtools
-#---isolate BAM reads that contribute to UMI counting
-samtools view BT363-GSC.bam | LC_ALL=C grep "xf:i:25" > body_filtered_sam
-#---extract BAM header
-samtools view -H BT363-GSC.bam > header_filtered_sam
-#---concatenate isolated BAM read and BAM header --IF SCRNASEQ, EATS ALOT OF MEMORY
-cat header_filtered_sam body_filtered_sam > BT363-GSC_filtered.sam
+
 #----convert SAM to BAM
 samtools view -b BT363-GSC_filtered.sam > BT363-GSC_filtered.bam
+
 samtools view BT363-GSC_filtered.bam
-samtools view pbmc_1k_v3_possorted_genome_bam_filterd.bam | cut -f 12- | tr "\t" "\n" | grep "CB:Z:" | uniq > cell_barcodes.txt
-# cut -f 12-                                                    Remove first 12 columns SAM file
-# tr "\t" "\n"                                                  Replace all tabs with a new line 
-# grep 'CB:Z:'                                                  Grep lines that start with CB:Z
-# uniq                                                          Omit repeated lines
-#-----------------------------------------------------------
-#----scan for features by single barcode
-samtools view BT363-GSC_filtered.bam | cut -f 12- | grep "CB:Z:CACACCTTCCAAGCCG" | tr "\t" "\n" | grep "GX:Z" |awk '{count[$1]++} END {for(j in count) print count[j], j}' | sort -nr > CACACCTTCCAAGCCG_1.txt
-# samtools view pbmc_1k_v3_possorted_genome_bam.bam              #
-# grep "xf:i:25"                                                 Print lines with xf:i:25
-# cut -f 12-                                                     Remove first 12 columns SAM file
-# grep "CB:Z:""                                                  Grep lines that start with CB:Z at the beginning of the line
-# tr "\t" "\n"                                                   Replace all tabs with a new line 
-# grep "GX:Z"                                                    Print lines with GX:Z at the beginning of the line
-# awk "{count[$1]++} END {for(j in count) print count[j], j}"    Count occurence of each barcode
-# sort -nr`                                                      Sort numerically and in reverse order
-#----------------------------------------------------
-#---counts barcodes
-wc -l cell_barcode.txt
+
 #----sort bam files
 samtools sort -o *.bam BT363-GSC_filtered.bam
+
 #----index bam
 samtools index *.bam
 
