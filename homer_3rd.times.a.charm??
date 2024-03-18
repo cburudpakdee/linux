@@ -17,3 +17,4 @@ homerTools trim -3 GATC -mis 0 -matchStart 20 -min 20 SRR21038697filtered_R2.par
 
 #---align each read file separately
 bowtie2 -p20 -x /home/em_b/bowtie2/mm10_index/mm10_index -U SRR21038697filtered_R1.part_001.fastq.gz.trimmed > SRR21038697filtered_R1.sam
+bowtie2 -p20 -x /home/em_b/bowtie2/mm10_index/mm10_index -U SRR21038697filtered_R2.part_001.fastq.gz.trimmed > SRR21038697filtered_R2.sam
