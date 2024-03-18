@@ -6,5 +6,6 @@ export PATH=/home/em_b/Homer/bin:$PATH
 
 #---note: homer currently only support mm10, not mm39!!!
 
+perl configureHomer.pl -install mm10
 
 
