@@ -52,7 +52,9 @@ sed '/chrM/d;/random/d;/chrUn/d' < muTh1_R1_2.hicup.sam > muTh1_chrM_filtered_hi
 
 samtools view -bS muTh1_chrM_filtered_hicup.sam > muTh1_chrM_filtered_hicup.bam
 
+#---chrM is removed from bam header
 
+bam2pairs -c /home/em_b/Desktop/HiCUP/mm39.chrom.sizes muTh1_chrM_filtered_hicup.bam muTh1_chrM_filtered_hicup_bam_pairs
 
 consider HOMER HiC PCA plotting
 http://homer.ucsd.edu/homer/interactions2/HiCpca.html
