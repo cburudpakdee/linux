@@ -45,6 +45,16 @@ pip install cooler
 
 cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 mm39.chrom.sizes:1000 pairs_out.bsorted.pairs fuckingwork.cool
 
+DID NOT WORK ON FINAL FILE!!!!
+tried:
+
+sed '/chrM/d;/random/d;/chrUn/d' < muTh1_R1_2.hicup.sam > muTh1_chrM_filtered_hicup.sam
+
+
+
+
+
+
 consider HOMER HiC PCA plotting
 http://homer.ucsd.edu/homer/interactions2/HiCpca.html
 
