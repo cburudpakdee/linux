@@ -1,3 +1,5 @@
 wget http://homer.ucsd.edu/homer/configureHomer.pl
 
+perl configureHomer.pl -install
+
 
