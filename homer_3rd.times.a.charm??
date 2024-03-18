@@ -2,4 +2,6 @@ wget http://homer.ucsd.edu/homer/configureHomer.pl
 
 perl configureHomer.pl -install
 
+export PATH=/home/em_b/Homer/bin:$PATH
+
 
