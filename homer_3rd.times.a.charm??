@@ -8,4 +8,4 @@ export PATH=/home/em_b/Homer/bin:$PATH
 
 perl configureHomer.pl -install mm10
 
-
+homerTools trim -3 GATC -mis 0 -matchStart 20 -min 20 SRR21038697filtered_R1.fastq.gz
