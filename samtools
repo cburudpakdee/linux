@@ -1,8 +1,6 @@
 
 #----convert SAM to BAM
-samtools view -b BT363-GSC_filtered.sam > BT363-GSC_filtered.bam
-
-samtools view BT363-GSC_filtered.bam
+samtools view -b muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
 
 #----sort bam files
 samtools sort -o *.bam BT363-GSC_filtered.bam
