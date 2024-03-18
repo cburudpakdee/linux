@@ -8,4 +8,9 @@ export PATH=/home/em_b/Homer/bin:$PATH
 
 perl configureHomer.pl -install mm10
 
+#--split files for pilot
+seqkit split2 -1 SRR21038697filtered_R1.fastq.gz -2 SRR21038697filtered_R2.fastq.gz -s 10000000 -O SRR21038697filtered -f -e .gz
+
 homerTools trim -3 GATC -mis 0 -matchStart 20 -min 20 SRR21038697filtered_R1.fastq.gz
+
+
