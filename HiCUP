@@ -52,7 +52,14 @@ sed '/chrM/d;/random/d;/chrUn/d' < muTh1_R1_2.hicup.sam > muTh1_chrM_filtered_hi
 
 samtools view -bS muTh1_chrM_filtered_hicup.sam > muTh1_chrM_filtered_hicup.bam
 
-#--sort and index bam if necessary
+samtools view -b muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
+
+samtools sort -o muTh1_sorted.hicup.bam muTh1_R1_2.hicup.bam
+
+samtools index muTh1_sorted.hicup.bam
+
+samtools view -b muTh1_sorted.hicup.bam chr{1..19} > muTh1_sorted_rmexChr.hicup.bam
+
 
 
 
