@@ -19,15 +19,15 @@ hicup --example
 hicup --config hicup_example.conf
 
 #---convert sam to bam 
+samtools view -b muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
 
-#-- has header use
-head muTh1_R1_2.hicup.sam 
-samtools view -bS muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
+samtools sort -o muTh1_sorted.hicup.bam muTh1_R1_2.hicup.bam
+
+samtools index muTh1_sorted.hicup.bam
+
+samtools view -b muTh1_sorted.hicup.bam chr{1..19} > muTh1_sorted_rmexChr.hicup.bam
 
 samtools view -H muTh1_R1_2.hicup.bam
-
-#--remove chrM from bam
-sed '/chrM/d;/random/d;/chrUn/d' < file.sam > file_filtered.sam
 
 ref: https://arimagenomics.com/wp-content/files/Bioinformatics-User-Guide-for-Visualization-of-Arima-HiC-Data-with-HiGlass-in-a-Mac-or-Linux-Based-OS.pdf
 
@@ -44,23 +44,3 @@ bam2pairs -c mm39.chrom.sizes SRR26855487_filtered.bam pairs_out
 pip install cooler
 
 cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 mm39.chrom.sizes:1000 pairs_out.bsorted.pairs fuckingwork.cool
-
-DID NOT WORK ON FINAL FILE!!!!
-tried:
-
-sed '/chrM/d;/random/d;/chrUn/d' < muTh1_R1_2.hicup.sam > muTh1_chrM_filtered_hicup.sam
-
-samtools view -bS muTh1_chrM_filtered_hicup.sam > muTh1_chrM_filtered_hicup.bam
-
-samtools view -b muTh1_R1_2.hicup.sam > muTh1_R1_2.hicup.bam
-
-samtools sort -o muTh1_sorted.hicup.bam muTh1_R1_2.hicup.bam
-
-samtools index muTh1_sorted.hicup.bam
-
-samtools view -b muTh1_sorted.hicup.bam chr{1..19} > muTh1_sorted_rmexChr.hicup.bam
-
-
-
-
-bam2pairs -c /home/em_b/Desktop/HiCUP/mm39.chrom.sizes muTh1_chrM_filtered_hicup.bam muTh1_chrM_filtered_hicup_bam_pairs
