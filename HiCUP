@@ -43,4 +43,4 @@ bam2pairs -c mm39.chrom.sizes SRR26855487_filtered.bam pairs_out
 
 pip install cooler
 
-cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 mm39.chrom.sizes:1000 pairs_out.bsorted.pairs fuckingwork.cool
+cooler cload pairs -c1 2 -p1 3 -c2 4 -p2 5 /home/em_b/Desktop/HiCUP/mm39.chrom.sizes:1000 pairs_out.bsorted.pairs.gz fuckingwork.cool
