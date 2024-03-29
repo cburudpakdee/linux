@@ -1,2 +1,2 @@
 sudo apt-get install -y pigz
-pigz -p 24 <file> 
+pigz -p 22 SRR26855486_1.fastq SRR26855486_2.fastq
