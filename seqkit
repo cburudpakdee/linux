@@ -2,7 +2,7 @@ tar -zxvf seqkit_linux_386.tar.gz
 sudo cp seqkit /usr/local/bin/
 
 #------remember split is per read file. Ex. 9.8M per R1/R2
-seqkit split2 -1 threefiles_R1.fastq -2 threefiles_R2.fastq -s 1000000 -O split -f -e .gz
+seqkit split2 -1 threefiles_R1.fastq -2 threefiles_R2.fastq -s 1000000 -o split -f -e .gz
 
 #---count reads to confirm splits
 echo $(zcat *.fastq.gz|wc -l)/4|bc
