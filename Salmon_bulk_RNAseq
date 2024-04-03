@@ -15,5 +15,4 @@ cat gencode.vM34.transcripts.fa.gz GRCm39.primary_assembly.genome.fa.gz > GRCm39
 #---genome indexing 
 salmon index -t GRCm39_gentrome.fa.gz -i salmon_index --decoys decoys.txt -k 31 --gencode --threads 22
 
-salmon quant -i salmon_index -l IU -1 norm1_R1.fastq.gz -2 norm1_R2.fastq.gz --validateMappings -o output_files
-
+salmon quant -i /home/em_b/salmon/salmon_index -l IU -1 A1_filtered_R1.fastq.gz -2 A1_filtered_R2.fastq.gz --validateMappings -o salmon_output --threads 22
