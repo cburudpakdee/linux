@@ -13,7 +13,7 @@ sed -i.bak -e 's/>//g' decoys.txt
 cat gencode.vM34.transcripts.fa.gz GRCm39.primary_assembly.genome.fa.gz > GRCm39_gentrome.fa.gz
 
 #---genome indexing 
-salmon index -t GRCm39_gentrome.fa.gz -i salmon_index --decoys decoys.txt -k 31 --gencode
+salmon index -t GRCm39_gentrome.fa.gz -i salmon_index --decoys decoys.txt -k 31 --gencode --threads 22
 
 salmon quant -i salmon_index -l IU -1 norm1_R1.fastq.gz -2 norm1_R2.fastq.gz --validateMappings -o output_files
 
