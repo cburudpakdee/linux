@@ -2,18 +2,11 @@ wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5
 
 export PATH=/home/em_b/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
 
-bowtie2 --help
-
-#----build the index using gencode primary assembly
 bowtie2-build -f GRCh38.p14.genome.fa.gz index
 
-#----run bowtie2 --remember to set number of threads to use 
-#-----point x to GRCh38_index folder with name on all bt2 files ie 'index'
-bowtie2 -x /home/em_b/bowtie2/GRCh38_index/index -1 demux_completematch_SRR18324550_2.fastq.gz -2 demux_completematch_SRR18324550_4.fastq.gz -S demux_completematch_SRR18324550.sam
-samtools head NSC.SRR18324536.sam
-
-#---convert to bam 
-samtools view -Sb NSC.SRR18324536.sam > NSC.SRR18324536.bam
+bowtie2 -x /home/em_b/bowtie2/GRCm39_index/GRCm39_bwt2_index 
+-1 SRR23082704_filtered_R1.fastq.gz -2 SRR23082704_filtered_R2.fastq.gz 
+-threads 22 | samtools view -bS > SRR23082704_mm39.bam
 
 #---remove duplicates  -s single -S paired
 samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
