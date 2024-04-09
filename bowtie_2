@@ -15,5 +15,3 @@ samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 samtools sort *.bam -o name_sorted.bam
 
 #---Run in MACS3
-
-https://star-protocols.cell.com/protocols/2708
