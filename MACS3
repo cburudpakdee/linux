@@ -7,5 +7,8 @@
 -q = q-value (FDR) cutoff
 
 #----MACS OUTPUT IS FOR INPUT or IGg CONTROL AND EXP FILE ONLY
-macs3 callpeak -t /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR18324536/NSC.SOX11.SRR18324536_filtered_rmdup_sorted.bam -c /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR20078562/NSC.IgG.SRR20078562_rmdup_sorted.bam  -g hs -n NSC_SOX11_IgG -B -q 0.01
+macs3 callpeak -t /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR18324536/NSC.SOX11.SRR18324536_filtered_rmdup_sorted.bam 
+-c /home/deviancedev/Desktop/drive_jan2024/FCCC/GSE198565_MB_G4_scATAC.hiC.scRNA/SRR20078562/NSC.IgG.SRR20078562_rmdup_sorted.bam  
+-g hs -n NSC_SOX11_IgG -B -q 0.01
+
 #---swap to R for analysis of macs3 output files 
