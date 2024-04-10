@@ -1,7 +1,7 @@
 -t = exp datafile
 -c = control datafile
 -f = format
--g = genome
+-g = genome (hs or mm)
 -n = prefix string for output files
 -B = store as bedgraph file ie .bdg
 -q = q-value (FDR) cutoff
