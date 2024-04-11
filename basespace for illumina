@@ -1,0 +1,7 @@
+install basespace into $HOME/bin to activate
+
+bs auth
+
+bs list projects
+
+bs download project -i 414305106 -o /home/em_b/Desktop --extension fastq.gz
