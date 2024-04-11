@@ -4,4 +4,4 @@ bs auth
 
 bs list projects
 
-bs download project -i 414305106 -o /home/em_b/Desktop --extension fastq.gz
+bs download project -i 414305106 -o /home/em_b/Desktop/[make a folder] --extension fastq.gz
