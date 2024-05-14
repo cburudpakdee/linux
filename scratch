@@ -1,0 +1,2 @@
+export PATH=/home/em_b/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
+bowtie2 -x /home/em_b/bowtie2/mm10_index/mm10_index -p 22 -1 A1.0hr.input_comb_filtered_R1.fastq.gz -2 A1.0hr.input_comb_filtered_R2.fastq.gz | samtools view -bS > A1_0hr_input.bam
