@@ -1,2 +1,4 @@
-export PATH=/home/em_b/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
-bowtie2 -x /home/em_b/bowtie2/mm10_index/mm10_index -p 20 -1 B1_0hr_input_comb_filtered_R1.part_001.fastq.gz -2 B1_0hr_input_comb_filtered_R2.part_001.fastq.gz | samtools view -bS > B1_0hr_input.bam
+#---root user
+sudo -i
+#---exit root
+exit
