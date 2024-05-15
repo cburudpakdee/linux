@@ -10,6 +10,5 @@ hostname
 ip addr or ifconfig
 
 #---find name server
-cat /etc/resolv.conf
-
+grep 'nameserver' /etc/resolv.conf
 
