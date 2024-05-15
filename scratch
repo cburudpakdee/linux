@@ -2,3 +2,11 @@
 sudo -i
 #---exit root
 exit
+
+#--hostname
+hostname
+
+#---ip address
+ip addr or ifconfig
+
+
