@@ -9,6 +9,6 @@ hostname
 #---ip address
 ip addr or ifconfig
 
-#---find name server
+#---find my DNS server IP address
 grep 'nameserver' /etc/resolv.conf
 
