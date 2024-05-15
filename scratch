@@ -12,3 +12,5 @@ ip addr or ifconfig
 #---find my DNS server IP address
 grep 'nameserver' /etc/resolv.conf
 
+#---find website my website DNS server IP address
+dig github.com
