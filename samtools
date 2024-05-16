@@ -11,3 +11,5 @@ samtools index muTh1_sorted.hicup.bam
 #---extract only chromosomes of interest
 samtools view -b muTh1_sorted.hicup.bam chr{1..19} > muTh1_sorted_rmexChr.hicup.bam
 
+#----merge bam files 
+samtools merge -o thra_0hr_igG J1.0h.IgG.sort.rmdup.bam K1_0hr_igG.rmdup.sort.bam L1_0h_igG.rmdup.sort.bam
