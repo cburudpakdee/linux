@@ -1,0 +1,4 @@
+conda install bioconda::hisat2
+
+hisat2-build -p 20 GRCm39.primary_assembly.genome.fa hisat_mm39
+
