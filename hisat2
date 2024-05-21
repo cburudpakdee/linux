@@ -4,3 +4,4 @@ hisat2-build -p 20 GRCm39.primary_assembly.genome.fa hisat_mm39
 
 hisat2 -t -p 20 -x /home/em_b/hisat_mm39/hisat_mm39 -1 SRR23386662_t3_filtered.fastq_R1.fastq.gz -2 SRR23386662_t3_filtered.fastq_R2.fastq.gz -S SRR23386662.sam
 
+samtools view -b *.sam > *.bam
