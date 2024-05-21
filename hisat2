@@ -10,3 +10,4 @@ samtools rmdup -S *.bam *.rmdup.bam
 
 samtools sort *.rmdup.bam -o *.rmdup.sort.bam
 
+samtools view -b *.rmdup.sort.bam chr{1..19} > *rmdup.sort.chr1.19.bam
