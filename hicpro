@@ -5,6 +5,5 @@ tar -zxvf v3.1.0.tar.gz
 cd HiC-Pro-3.1.0
 
 #--if error, check tmp folder for check_python.log
-pip install bx
-pip install bx-python
-pip install iced
+
+docker build -t hicpro:3.0.0
