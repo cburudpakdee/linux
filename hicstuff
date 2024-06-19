@@ -1,4 +1,4 @@
 #-----rfastp files for hicstuff
 pip3 install -U hicstuff
-
+hicstuff pipeline --help
 
