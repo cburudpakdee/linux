@@ -6,9 +6,7 @@
 -B = store as bedgraph file ie .bdg
 -q = q-value (FDR) cutoff
 
-#----MACS OUTPUT IS FOR INPUT or IGg CONTROL AND EXP FILE ONLY
-macs3 callpeak -t NSC.SOX11.SRR18324536_filtered_rmdup_sorted.bam 
--c NSC.IgG.SRR20078562_rmdup_sorted.bam  
--g hs -n NSC_SOX11_IgG -B -q 0.01
+#--for mm39 genome size (deeptools)
+macs3 callpeak -t comb_T3_Thra.bam -c comb_T3_igG.bam -g 2654621783 -n thra_test -B -q 0.05
 
 #---swap to R for analysis of macs3 output files 
