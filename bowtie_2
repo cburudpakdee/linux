@@ -9,10 +9,10 @@ bowtie2 -x /home/em_b/bowtie2/GRCm39_index/GRCm39_bwt2_index
 -2 C3.T3.Input_filtered_R2.fastq.gz 
 | samtools view -bS > C3.T3.Input.bam
 
-#---remove duplicates  -s single -S paired
 samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 
-#---sort bam 
 samtools sort *.bam -o name_sorted.bam
+
+samtools view -b *.rmdup.sort.bam chr{1..19} > *rmdup.sort.chr1.19.bam
 
 #---Run in MACS3
