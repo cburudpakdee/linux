@@ -1,0 +1,4 @@
+sudo su
+#----go to folder
+#----change permission by chown <username> folder
+chown em_b library
