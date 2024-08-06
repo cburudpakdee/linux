@@ -1,3 +1,10 @@
 openssl req -newkey rsa:4096 -x509 
 -sha256 -days 3650 -nodes -out cert01.crt 
 -keyout cert01.key
+
+#---fill out prompts and generate .crt and .key files
+openssl pkcs12 -export -in cert01.crt -inkey cert01.key -out cert01.p12
+#---do not have to enter export password just enter
+#---now you have .p12 file
+
+
