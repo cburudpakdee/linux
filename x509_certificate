@@ -1,3 +1,8 @@
+#---log into CAcert
+#--make new client certificate
+#---follow prompts
+#----save .crt file and .pem files
+
 
 
 #----------------------------------------------------------------
