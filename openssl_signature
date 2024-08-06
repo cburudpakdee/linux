@@ -7,4 +7,7 @@ openssl pkcs12 -export -in cert01.crt -inkey cert01.key -out cert01.p12
 #---do not have to enter export password just enter
 #---now you have .p12 file
 
+#--open Firefox>settings>privacy security>view certificates
+#--import to 'your certificates' 
+
 
