@@ -1,2 +1,7 @@
+
+
+#----------------------------------------------------------------
 mkdir dig_sign
 cd dig_sign
+certutil -N -d /home/em_b/dig_sign
+
