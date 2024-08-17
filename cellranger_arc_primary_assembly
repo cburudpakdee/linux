@@ -31,3 +31,4 @@ cellranger-arc mkgtf Mus_musculus.GRCm39.112.gtf filtered_Mus_musculus.GRCm39.11
     input_gtf: ["filtered_Mus_musculus.GRCm39.112.gtf"]
 }
 
+cellranger-arc mkref --config=GRCm39.config
