@@ -22,3 +22,12 @@ cellranger-arc mkgtf Mus_musculus.GRCm39.112.gtf filtered_Mus_musculus.GRCm39.11
 --attribute=gene_biotype:TR_J_gene \
 --attribute=gene_biotype:TR_J_pseudogene \
 --attribute=gene_biotype:TR_C_gene
+
+#--make config.txt file in working directory
+{
+    organism: "mus_musculus"
+    genome: ["mm39"]
+    input_fasta: ["Mus_musculus.GRCm39.dna.primary_assembly.fa"]
+    input_gtf: ["filtered_Mus_musculus.GRCm39.112.gtf"]
+}
+
