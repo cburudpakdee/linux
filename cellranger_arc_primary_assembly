@@ -1,1 +1,3 @@
 wget https://ftp.ensembl.org/pub/release-112/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
+gunzip -v Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
+
