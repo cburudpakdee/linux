@@ -1,0 +1,25 @@
+#--download scRNAseq fastqs and split. Cannot use fasterq-dump...
+fastq-dump <file>.sra --split-files
+#--cell ID and UMI data in Read 1 (~28 bp)
+#--Read 2 is the RNA insert (~91 bp)
+
+#--get 2 index files and 2 read files and rename and format for cellranger arc:
+#--EX: <name>_S1_L001_I1_001.fastq <name>_S1_L001_I2_001.fastq <name>_S1_L001_R1_001.fastq <name>_S1_L001_R2_001.fastq
+
+#--place all files into folder named 'rna'. Gzip all files in folder:
+pigz -p 20 <all rna files>
+
+#---download scATACseq fastqs
+fastq-dump <file>.sra --split-files
+#-- There four fastq.gz files which will be generated. 
+#-- I1, R1, R2 and R3. I1 is the 8 bp sample barcode, R1 is the forward read. 
+#-- R2 is the 16 bp 10x feature barcode and R3 is the reverse read. 
+
+#--place all files into folder named 'rna'. Gzip all files in folder:
+pigz -p 20 <all atac files>
+
+#---make .csv file with metadata to point to fastq files for cellranger-arc:
+fastqs,sample,library_type
+/home/deviancedev01/work_stuff/multiome_processing/rna,rnaseq,Gene Expression
+/home/deviancedev01/work_stuff/multiome_processing/atac,atacseq,Chromatin Accessibility
+
