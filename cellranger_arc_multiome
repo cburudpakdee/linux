@@ -30,4 +30,6 @@ fastqs,sample,library_type
 cellranger-arc count --id=test --reference=/home/deviancedev01/cellranger_arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0 
 --libraries=/home/deviancedev01/work_stuff/multiome_processing/metadata.csv --localcores=20 --localmem=32
 
+#---2.5 hours later/condition, check 'outs' folder and enter into R.
+
 
