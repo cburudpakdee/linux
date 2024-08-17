@@ -1,3 +1,5 @@
+export PATH=/home/deviancedev01/cellranger_arc/cellranger-arc-2.0.2/bin:$PATH
+
 #--download scRNAseq fastqs and split. Cannot use fasterq-dump...
 fastq-dump <file>.sra --split-files
 #--cell ID and UMI data in Read 1 (~28 bp)
