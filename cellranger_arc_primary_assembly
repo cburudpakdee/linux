@@ -3,3 +3,22 @@ gunzip -v Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
 
 wget https://ftp.ensembl.org/pub/release-112/gtf/mus_musculus/Mus_musculus.GRCm39.112.gtf.gz
 gunzip -v Mus_musculus.GRCm39.112.gtf.gz
+
+cellranger-arc mkgtf Mus_musculus.GRCm39.112.gtf filtered_Mus_musculus.GRCm39.112.gtf \
+--attribute=gene_biotype:protein_coding \
+--attribute=gene_biotype:lncRNA \
+--attribute=gene_biotype:antisense \
+--attribute=gene_biotype:IG_LV_gene \
+--attribute=gene_biotype:IG_V_gene \
+--attribute=gene_biotype:IG_V_pseudogene \
+--attribute=gene_biotype:IG_D_gene \
+--attribute=gene_biotype:IG_J_gene \
+--attribute=gene_biotype:IG_J_pseudogene \
+--attribute=gene_biotype:IG_C_gene \
+--attribute=gene_biotype:IG_C_pseudogene \
+--attribute=gene_biotype:TR_V_gene \
+--attribute=gene_biotype:TR_V_pseudogene \
+--attribute=gene_biotype:TR_D_gene \
+--attribute=gene_biotype:TR_J_gene \
+--attribute=gene_biotype:TR_J_pseudogene \
+--attribute=gene_biotype:TR_C_gene
