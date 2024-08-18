@@ -28,6 +28,8 @@ fastqs,sample,library_type
 /home/deviancedev01/work_stuff/multiome_processing/rna,rnaseq,Gene Expression
 /home/deviancedev01/work_stuff/multiome_processing/atac,atacseq,Chromatin Accessibility
 
+#--Ensembl in R only for mm10!!!!
+
 #-- Run cellranger-arc: (id is arbitrary for output folder)
 cellranger-arc count --id=test --reference=/home/deviancedev01/cellranger_arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0 
 --libraries=/home/deviancedev01/work_stuff/multiome_processing/metadata.csv --localcores=20 --localmem=32
