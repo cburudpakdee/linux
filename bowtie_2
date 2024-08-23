@@ -1,6 +1,6 @@
 wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-sra-linux-x86_64.zip/download
 
-export PATH=/home/em_b/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
+export PATH=/home/deviancedev01/bowtie2-2.5.3-sra-linux-x86_64:$PATH
 
 bowtie2-build -f GRCh38.p14.genome.fa.gz index
 
