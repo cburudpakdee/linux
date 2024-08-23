@@ -1,5 +1,4 @@
-#-----rfastp files for hicstuff
-pip3 install -U hicstuff
+conda install bioconda::hicstuff 
 hicstuff pipeline --help
 export PATH=/home/em_b/bowtie2/bowtie2-2.5.3-sra-linux-x86_64:$PATH
 
