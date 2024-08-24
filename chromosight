@@ -1,0 +1,5 @@
+conda install -c bioconda -c conda-forge chromosight
+#--for hg38
+chromosight detect --pattern=loops_small --threads=10 
+  --min-dist=15000 
+  --max-dist=2000000 abs_fragments_contacts_weighted.mcool::/resolutions/10000 out_10kb_loops_small
