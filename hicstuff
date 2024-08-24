@@ -3,6 +3,6 @@ hicstuff pipeline --help
 export PATH=/home/deviancedev01/bowtie2-2.5.3-sra-linux-x86_64:$PATH
 
 hicstuff pipeline --aligner bowtie2 --enzyme "DpnII,HinfI" --binning 1000 
---duplicates --filter --distance-law --plot --threads 20 
---genome /home/em_b/bowtie2/GRCh38_index/index 
-SRR17223321_filtered_R1.fastq.gz SRR17223321_filtered_R2.fastq.gz
+--duplicates --filter --distance-law --plot --threads 22 --no-cleanup --prefix 
+--quality-min=30 --outdir=/home/deviancedev01/hic/combined_files 
+--genome /home/deviancedev01/bowtie_hg38/index combined_R1.fastq combined_R2.fastq
