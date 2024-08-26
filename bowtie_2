@@ -11,7 +11,8 @@ bowtie2 -x /home/em_b/bowtie2/GRCm39_index/GRCm39_bwt2_index
 | samtools view -bS > C3.T3.Input.bam
 
 #---If unpaired use: 
-
+bowtie2 -x /home/deviancedev01/bowtie_hg38/index 
+-U SRR21845243_1.fastq -p 22 | samtools view -bS > HAP1_P_IFN_IpH3K4me3.bam
 
 samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 
