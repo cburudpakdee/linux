@@ -4,10 +4,14 @@ export PATH=/home/deviancedev01/bowtie2-2.5.3-sra-linux-x86_64:$PATH
 
 bowtie2-build -f GRCh38.p14.genome.fa.gz index
 
+#----If paired use :
 bowtie2 -x /home/em_b/bowtie2/GRCm39_index/GRCm39_bwt2_index 
 -p 22 -1 C3.T3.Input_filtered_R1.fastq.gz 
 -2 C3.T3.Input_filtered_R2.fastq.gz 
 | samtools view -bS > C3.T3.Input.bam
+
+#---If unpaired use: 
+
 
 samtools rmdup -S NSC.SRR18324536.bam NSC.SRR18324536_rmdup.bam
 
