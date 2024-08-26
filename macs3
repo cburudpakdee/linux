@@ -7,6 +7,19 @@
 -q = q-value (FDR) cutoff
 
 #--for mm39 genome size (deeptools)
-macs3 callpeak -t comb_T3_Thra.bam -c comb_T3_igG.bam -g 2654621783 -n thra_test -B -q 0.05
+macs3 callpeak -t comb_T3_Thra.bam 
+-c comb_T3_igG.bam 
+-g 2654621783 
+-n thra_test 
+-B 
+-q 0.05
+
+#--for hg38 genome size (deeptools)
+macs3 callpeak -t HAP1_P_IFN_IpH3K4me3.rmdup.sorted.cleaned.bam 
+-c Input_HAP1_P_IFN.rmdup.sorted.cleaned.bam 
+-g 2913022398 
+-n GSE215081_hap1_ifny_h3k4me3 
+-B 
+-q 0.05
 
 #---swap to R for analysis of macs3 output files 
