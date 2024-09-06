@@ -39,6 +39,6 @@ make SMS="50 60"
 make HOST_COMPILER=g++
 cd /home/deviancedev01/cuda/cuda-samples/bin/x86_64/linux/release
 ./deviceQuery
-
+./bandwidthTest
 
 
