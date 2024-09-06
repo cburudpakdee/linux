@@ -21,3 +21,8 @@ sudo apt-get update
 sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
 reboot
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+/usr/bin/nvidia-persistenced --verbose
+cat /proc/driver/nvidia/version
