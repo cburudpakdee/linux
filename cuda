@@ -9,7 +9,9 @@ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
 mkdir cuda
 cd cuda
 wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+md5sum cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+sudo apt-get install linux-headers-$(uname -r)
+sudo apt-key del 7fa2af80
+sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
+sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
 
-sudo nano /etc/default/grub
-#---add amd_iommu=off to line in nano and save
-GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=off"
