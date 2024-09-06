@@ -15,6 +15,6 @@ sudo apt-key del 7fa2af80
 sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-archive-keyring.gpg
 sudo cp cuda-archive-keyring.gpg /usr/share/keyrings/
-
-sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
-
+echo "deb [signed-by=/usr/share/keyrings/cuda-archive-keyring.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /" | sudo tee /etc/apt/sources.list.d/cuda-ubuntu2004-x86_64.list
+sudo apt-get update
+sudo apt-get install cuda-toolkit
