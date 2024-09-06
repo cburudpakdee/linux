@@ -26,3 +26,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64\
                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 /usr/bin/nvidia-persistenced --verbose
 cat /proc/driver/nvidia/version
+
+#---cuda should work
+export PATH=/usr/local/cuda-12.6/bin:$PATH
+cuda-gdb
