@@ -30,3 +30,15 @@ cat /proc/driver/nvidia/version
 #---cuda should work
 export PATH=/usr/local/cuda-12.6/bin:$PATH
 cuda-gdb
+
+git clone https://github.com/NVIDIA/cuda-samples.git
+cd cuda-samples/
+make
+make dbg=1
+make SMS="50 60"
+make HOST_COMPILER=g++
+cd /home/deviancedev01/cuda/cuda-samples/bin/x86_64/linux/release
+./deviceQuery
+
+
+
