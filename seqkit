@@ -2,7 +2,7 @@ tar -zxvf seqkit_linux_386.tar.gz
 sudo cp seqkit /usr/local/bin/
 
 #------do splits on each read seperately 
-seqkit split2 fastq.gz -s 30000000 -o split -f -e .gz
+seqkit split2 fastq.gz -s 30000000 -o R1 -f -e .gz
 
 #---split into even parts
 seqkit split2 SRR18825718_filtered_R2.fastq.gz -o split -p 2 -e .gz
