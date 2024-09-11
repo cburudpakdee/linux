@@ -15,6 +15,9 @@ salmon index -t refdata-gex-GRCh38-2020-A/transcriptome.fa -i grch38_idx
 
 #---generate transcript to gene file
 awk '{if($3=="transcript") {OFS="\t"; print $14, $10} }' genes.gtf | sed 's/[;\"]//g' > t2g.tsv
+#--or
+awk '{if($3=="transcript") {OFS="\t"; print $14, $20} }' genes.gtf | sed 's/[;\"]//g' > t2g2.tsv
+
 
 #-----------------START HERE IF YOU HAVE INDEX
 wget https://anaconda.org/bioconda/alevin-fry/0.9.0/download/linux-64/alevin-fry-0.9.0-h919a2d8_0.tar.bz2
