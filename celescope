@@ -17,7 +17,6 @@ celescope rna mkref \
  --fasta Homo_sapiens.GRCh38.dna.primary_assembly.fa \
  --gtf Homo_sapiens.GRCh38.99.filtered.gtf \
  --mt_gene_list mt_gene_list.txt
-sh run.sh
 
 #---create shell script as run.sh
 multi_rna\
@@ -31,4 +30,8 @@ multi_rna\
 #- 2nd column: Fastq file directory path.
 #- 3rd column: Sample name, which is the prefix of all output files.
 SRR26035084_filtered /home/deviancedev01/Desktop/fastq_tests/normals hcc_norm
+
+sh run.sh
+cd shell
+sh hcc_norm.sh
 
