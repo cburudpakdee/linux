@@ -31,6 +31,7 @@ multi_rna\
 #- 3rd column: Sample name, which is the prefix of all output files.
 SRR26035084_filtered /home/deviancedev01/Desktop/fastq_tests/normals hcc_norm
 
+#-- run celescope
 sh run.sh
 cd shell
 sh hcc_norm.sh
