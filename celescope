@@ -11,4 +11,4 @@ gunzip Homo_sapiens.GRCh38.99.gtf.gz
 wget https://raw.githubusercontent.com/singleron-RD/CeleScope/master/conda_pkgs.txt
 mamba create -n celescope -y --file conda_pkgs.txt
 conda activate celescope
-
+pip install celescope
