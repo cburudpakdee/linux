@@ -7,6 +7,8 @@ wget https://raw.githubusercontent.com/singleron-RD/CeleScope/master/conda_pkgs.
 mamba create -n celescope -y --file conda_pkgs.txt
 conda activate celescope
 pip install celescope
+
+#--exit out and mk hs_ensembl_99
 wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 wget ftp://ftp.ensembl.org/pub/release-99/gtf/homo_sapiens/Homo_sapiens.GRCh38.99.gtf.gz
 gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
@@ -32,6 +34,7 @@ multi_rna\
 SRR26035084_filtered /home/deviancedev01/Desktop/fastq_tests/normals hcc_norm
 
 #-- run celescope
+#-- DO NOT RUN IN SHELL DIR
 sh run.sh
 cd shell
 sh hcc_norm.sh
