@@ -25,6 +25,9 @@ nvcc --version
 cat /proc/driver/nvidia/version
 nvidia-smi
 
+#---need to install cuDNN
+https://docs.nvidia.com/deeplearning/cudnn/latest/installation/linux.html
+
 break 
 sudo apt-get install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
