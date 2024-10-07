@@ -32,6 +32,10 @@ https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&
 sudo apt-get install python3-pip
 sudo apt install python3-virtualenv
 
+#---go into cuda folder and create virtual environment
+virtualenv -p py3.12.3 venv
+#--activate virual environment
+source venv/bin/activate
 
 
 break 
