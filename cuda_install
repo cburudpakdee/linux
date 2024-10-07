@@ -20,6 +20,9 @@ nvcc --version
 #--go to https://docs.nvidia.com/cuda/cuda-installation-guide-linux/
 #--follow instructions for ubuntu
 
+#--confirm install of cuda
+! /usr/bin/nvidia-smi
+
 
 break 
 sudo apt-get install linux-headers-$(uname -r)
