@@ -26,7 +26,11 @@ cat /proc/driver/nvidia/version
 nvidia-smi
 
 #---need to install cuDNN
-https://docs.nvidia.com/deeplearning/cudnn/latest/installation/linux.html
+https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
+#---follow guide
+
+
+
 
 break 
 sudo apt-get install linux-headers-$(uname -r)
