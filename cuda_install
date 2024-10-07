@@ -22,7 +22,8 @@ nvcc --version
 
 #--confirm install of cuda
 ! /usr/bin/nvidia-smi
-
+cat /proc/driver/nvidia/version
+nvidia-smi
 
 break 
 sudo apt-get install linux-headers-$(uname -r)
