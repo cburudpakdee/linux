@@ -29,6 +29,8 @@ nvidia-smi
 https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
 #---follow guide
 
+sudo apt-get install python3-pip
+sudo apt install python3-virtualenv
 
 
 
