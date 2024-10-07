@@ -40,7 +40,7 @@ virtualenv -p py3.12.3 venv
 #--activate virual environment
 source venv/bin/activate
 
-#--install torch
+#--install torch in venv
 pip3 install torch torchvision torchaudio
 
 #--test torch in python
