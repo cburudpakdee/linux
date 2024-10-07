@@ -1,6 +1,12 @@
 #---check version of ubuntu
 lsb_release -a
 
+#---check if you have cuda capable gpu
+lspci | grep -i nvidia
+uname -m && cat /etc/*release
+gcc --version
+
+
 #-- go to https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
 #-- follow prompts for cuda toolkit installer
 
