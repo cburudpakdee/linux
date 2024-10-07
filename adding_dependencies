@@ -1,0 +1,4 @@
+wget http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/libtiff5_4.3.0-6_amd64.deb
+dpkg -i libtiff5_4.3.0-6_amd64.deb
+
+#--etc. etc.
