@@ -1,3 +1,6 @@
+#---THIS WILL TAKE SOME TIME SO BE READY
+
+
 #---check version of ubuntu
 lsb_release -a
 
@@ -37,6 +40,8 @@ virtualenv -p py3.12.3 venv
 #--activate virual environment
 source venv/bin/activate
 
+#--install torch
+pip3 install torch torchvision torchaudio
 
 break 
 sudo apt-get install linux-headers-$(uname -r)
