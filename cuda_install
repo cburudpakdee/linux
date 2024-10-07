@@ -12,6 +12,11 @@ cd cuda
 #-- go to https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
 #-- follow prompts for cuda toolkit installer
 
+#--reinstall toolkit in terminal--??? I dunno
+
+
+
+
 break 
 sudo apt-get install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
