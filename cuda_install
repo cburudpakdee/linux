@@ -13,8 +13,12 @@ cd cuda
 #-- follow prompts for cuda toolkit installer
 
 #--reinstall toolkit in terminal--??? I dunno
+sudo apt-get install nvidia-cuda-toolkit
 
+nvcc --version
 
+#--go to https://docs.nvidia.com/cuda/cuda-installation-guide-linux/
+#--follow instructions for ubuntu
 
 
 break 
