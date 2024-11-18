@@ -1,13 +1,9 @@
-#---ONLY FOR RAM OF >32MB!!!!!!!!!!!!!!!!!!!!!!!
 #---if on new machine and install is required
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install g++
 sudo apt-get make
-#-----gunzip -c : This option is used to view the text within a compressed file without uncompressing it
-#-----use -1000 to indicate number of reads to parse in separate output file ie. 1000 reads here
-gunzip -c <fast.q.gz file> | head -1000 > output.fastq
-less output.fastq
+
 wget https://github.com/alexdobin/STAR/archive/2.7.11a.tar.gz
 tar -xzf 2.7.11a.tar.gz
 rm -r 2.7.11a.tar.gz
