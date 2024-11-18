@@ -1,5 +1,0 @@
-cellranger-arc mkfastq --id='name' 
---run=/home/em_b/Desktop/snRNA+ATAC_huPBMC/myRNA/SRR26312478_multi_atac/cellranger-arc-tiny-bcl-atac-1.0.0 
---csv=/home/em_b/Desktop/snRNA+ATAC_huPBMC/myRNA/SRR26312478_multi_atac/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv 
---localcores=22 
---localmem=60
