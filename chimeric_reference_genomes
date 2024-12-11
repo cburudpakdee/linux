@@ -28,6 +28,8 @@ cat GFP.fa | grep -v "^>" | tr -d "\n" | wc -c
 echo -e 'GFP\tunknown\texon\t1\t922\t.\t+\t.\tgene_id "GFP"; transcript_id "GFP"; gene_name "GFP"; gene_biotype "protein_coding";' > GFP.gtf
 cat GFP.gtf 
 
+#---download genome fasta and gtf from ncbi
+
 
 
 
