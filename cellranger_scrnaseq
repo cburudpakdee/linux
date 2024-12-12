@@ -2,3 +2,5 @@
 
 #----get fastqs
 wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v3/pbmc_1k_v3_fastqs.tar
+
+#---I1 index file ~8bp/ R1 file ~24bps/ R2 file ~72bps
