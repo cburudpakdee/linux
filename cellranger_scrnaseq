@@ -1,0 +1,4 @@
+#-----download genome assembly and gtf files from ENSEMBL and mkref in cellranger
+
+#----get fastqs
+wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v3/pbmc_1k_v3_fastqs.tar
