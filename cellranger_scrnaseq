@@ -3,7 +3,7 @@
 #----get fastqs
 wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v3/pbmc_1k_v3_fastqs.tar
 
-#---I1 index file ~8bp/ R1 file ~25bps/ R2 file ~90bps
+#---I1 index file ~8bp/ R1 file ~25bps/ R2 file ~90bps. Format <sample>_S1_L001_R1_001.fastq
 
 #---run cellranger
 cellranger count --id=pbmc_ebv_test --fastqs=pbmc_1k_v3_fastqs --sample=pbmc_1k_v3 --transcriptome=/home/em/Desktop/GSE282400_bcell_ebv/Homo_sapiens_GRCh38_dna_primary_assembly_ebv --create-bam false
