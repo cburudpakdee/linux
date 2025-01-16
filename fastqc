@@ -1,0 +1,6 @@
+conda install bioconda::fastqc
+
+#---run on fastq files in fastqc window to check for adapter content and quality scores
+fastqc
+
+#---if needed run Rfastq to trim and remove adapters
