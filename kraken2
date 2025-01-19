@@ -1,0 +1,27 @@
+#---reference https://hackmd.io/@AstrobioMike/kraken2-bracken-standard-build
+
+conda create -n kraken2 -c conda-forge -c bioconda -c defaults kraken2 bracken
+conda activate kraken2
+
+mkdir kraken2_db
+
+#---choose organisms to include into custom database and download
+kraken2-build --download-library archaea --db kraken2_db
+kraken2-build --download-library bacteria --db kraken2_db
+kraken2-build --download-library viral --db kraken2_db
+kraken2-build --download-library human --db kraken2_db
+kraken2-build --download-library fungi --db kraken2_db
+kraken2-build --download-library protozoa --db kraken2_db
+kraken2-build --download-library UniVec --db kraken2_db
+kraken2-build --download-library UniVec_Core --db kraken2_db
+
+kraken2-build --download-taxonomy --db kraken2_db
+
+kraken2-build --build --db kraken2_db --threads 22
+
+or
+
+#---download prebuilt databases with limited RAM
+#---https://benlangmead.github.io/aws-indexes/k2
+
+kraken2 --db /home/em/Desktop/k2_pluspf_16gb_20240904 unmapped.fastq.gz --threads 20 --use-names --report kraken_report.csv --report-zero-counts --output kraken.out
