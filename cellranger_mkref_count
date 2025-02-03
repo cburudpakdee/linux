@@ -1,0 +1,18 @@
+#---get human genome current version
+wget https://ftp.ensembl.org/pub/release-113/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+head Homo_sapiens.GRCh38.dna.primary_assembly.fa
+
+#---get human genome gtf current version
+wget https://ftp.ensembl.org/pub/release-113/gtf/homo_sapiens/Homo_sapiens.GRCh38.113.gtf.gz
+gunzip Homo_sapiens.GRCh38.113.gtf.gz
+head Homo_sapiens.GRCh38.113.gtf
+
+#---filter gtf for protein coding sequences
+cellranger mkgtf Homo_sapiens.GRCh38.113.gtf Homo_sapiens.GRCh38.113.filtered.gtf --attribute=gene_biotype:protein_coding
+
+#---make reference
+cellranger mkref --genome=custom_genome_ref --fasta=Homo_sapiens.GRCh38.dna.primary_assembly.fa --genes=Homo_sapiens.GRCh38.113.filtered.gtf
+
+#---run cellranger count
+cellranger count --id=custom_genome_cts --fastqs=fastq_files --sample=sample --transcriptome=custom_genome_ref --create-bam true
